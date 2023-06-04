@@ -78,7 +78,6 @@ module.exports = {
         { _id: req.params.userId },
         { $pull: { friends: req.params.friendId } }
       );
-
       if (!friend) {
         return res.status(404).json({ message: "No user with this id!" });
       }
